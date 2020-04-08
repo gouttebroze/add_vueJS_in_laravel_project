@@ -12,9 +12,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-       
-
-    App\User::create(
+        
+        $this->call(CategoriesTableSeeder::class); 
+        $this->call(ProductsTableSeeder::class);
+        $this->call(ProduistableSeeder::class); 
+        
+    }
+   /* App\User::create(
         [
             'name' => 'Joey Ramone',
             'email' => 'joey-ramone@ny.us',
@@ -27,8 +31,8 @@ class DatabaseSeeder extends Seeder
             'artist_name' => 'Ramones',// 'Nirvana', 'Daniel Johnston',
             'product_name' => 'RAMONES', //'In Utero', 'Pain',
             'desc_product' => 'First album from Ramones. First punk rock band from New-York',// 'Last album of this band', 'Second album of the king of Lo-Fi',
-            'img_filename' => 'RAMONES.jpg', //'in_utero.jpg', 'pain.jpg',
-            'category_id' => '1',// '2', '2',
+            'img_filename' => 'RAMONES.jpeg', //'in_utero.jpg', 'pain.jpg',
+            'category_id' => '3',// '2', '2',
             'year' => '1976',// '1994', '1984',
             'price_product' => '10',// '16', '19',   
             
@@ -38,7 +42,7 @@ class DatabaseSeeder extends Seeder
    App\Category::create(
         [
             'name' => 'Vinyls',
-            'slug' => 'Vinyls',
+            
 
         ]
     );
@@ -46,7 +50,7 @@ class DatabaseSeeder extends Seeder
     App\Category::create(
             [
                 'name' => 'CD',
-                'slug' => 'CD',
+                
     
             ]
     );
@@ -54,7 +58,7 @@ class DatabaseSeeder extends Seeder
     App\Category::create(
             [
                     'name' => 'CD',
-                    'slug' => 'CD',
+        
         
             ]
     );
@@ -62,7 +66,7 @@ class DatabaseSeeder extends Seeder
     App\Category::create(
                 [
                     'name' => 'cassettes',
-                    'slug' => 'cassettes',
+                
         
                 ]
     );
@@ -70,7 +74,7 @@ class DatabaseSeeder extends Seeder
     App\Category::create(
                 [
                     'name' => 'Livres: Graphzines',
-                    'slug' => 'Livres: Graphzines',
+                    
             
                 ]
     );
@@ -83,11 +87,11 @@ class DatabaseSeeder extends Seeder
         while (--$i) {
             $category->products()->save(factory(App\Product::class)->make());
         }
-    });*/
+    });
 }
 
 
-}
+}*/
 
     
 }
